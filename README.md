@@ -17,7 +17,6 @@ A simple but powerful node for ComfyUI that displays text input in a readable fo
 
 1. Clone this repository into your `ComfyUI/custom_nodes` directory:
 
-
 ```bash
 cd ComfyUI/custom_nodes
 git clone https://github.com/fairy-root/ComfyUI-Show-Text.git
@@ -38,6 +37,7 @@ The node will automatically update whenever the input text changes.
 ## Example Workflow
 
 You can use Show Text with:
+
 - Text generation nodes
 - Prompt builders
 - CLIP interrogators

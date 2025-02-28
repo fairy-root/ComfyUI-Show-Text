@@ -1,7 +1,10 @@
-from .showtext import NODE_CLASS_MAPPINGS, NODE_DISPLAY_NAME_MAPPINGS
+from .showtext import ComfyUIShowText
 
-# Specify the web directory for UI components
+NODE_CLASS_MAPPINGS = {
+    "ComfyUIShowText": ComfyUIShowText,
+}
+
 WEB_DIRECTORY = "./web"
-
-# Export the node mappings
-__all__ = ["NODE_CLASS_MAPPINGS", "NODE_DISPLAY_NAME_MAPPINGS", "WEB_DIRECTORY"]
+NODE_DISPLAY_NAME_MAPPINGS = {
+    "ComfyUIShowText": "ComfyUI Show Text",
+}
