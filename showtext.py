@@ -41,9 +41,9 @@ class ComfyUIShowText:
 
 
 NODE_CLASS_MAPPINGS = {
-    "ComfyUIShowText": ComfyUIShowText,
+    "ShowText": ComfyUIShowText,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "ComfyUIShowText": "ComfyUI Show Text",
+    "ShowText": "Show Text",
 }
