@@ -8,10 +8,10 @@ app.registerExtension({
     if (nodeData.name === "ShowText") {
       function populate(text) {
         if (this.widgets) {
-          for (let i = 1; i < this.widgets.length; i++) {
-            this.widgets[i].onRemove?.();
+          for (let i = 0; i < this.widgets.length; i++) {
+            this.widgets[i]?.onRemove?.();
           }
-          this.widgets.length = 1;
+          this.widgets.length = 0;
         }
 
         const v = [...text];
@@ -25,8 +25,11 @@ app.registerExtension({
             ["STRING", { multiline: true }],
             app
           ).widget;
-          w.inputEl.readOnly = true;
-          w.inputEl.style.opacity = 0.6;
+          const el = w.inputEl || w.element;
+          if (el) {
+            el.readOnly = true;
+            el.style.opacity = 0.6;
+          }
           w.value = list;
         }
 
